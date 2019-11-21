@@ -4,7 +4,7 @@ In this week's project, you'll be able to practice your React state skills by fe
 
 We've built a simple API to collect 'happy thoughts'. The end result should look like this:
 
-![Design](https://i.imgur.com/3Zi1Kl4.png)
+![Design](https://i.imgur.com/NUoE9gX.png)
 
 To achieve this, we've built an API with three endpoints:
 
