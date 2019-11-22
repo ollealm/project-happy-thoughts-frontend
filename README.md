@@ -148,6 +148,12 @@ Below are some ideas for improvements you could make to the app. Feel free to pi
 
 Make sure you've commited and pushed a version of your project before starting with the stretch goals.
 
+**_Handle loading states_**
+
+When you initially fetch the list of recent thoughts, it might take a little time to get the response back from the API. During this time, you could show a loading message or spinner of some sort on the page. Hint: use something like `const [loading, setLoading] = useState(true)` to make it so the page is loading by default, then call `setLoading(false)` once you get the response back from the API.
+
+With the new thought form and the heart button, you could choose to also show a loading state, or you could opt to do an [optimistic update](https://dev.to/tiagodcosta/being-optimistic-in-ui-511k) which means you update the UI before the API request has succeeded (making the assumption that it will be successful).
+
 **_Show error message when validation fails_**
 
 When POSTing a new thought, if the message was empty, too long, or too short, you get an error message back from the API. You could use this to set some sort of `error` state to show a friendly message to your user.
