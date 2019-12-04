@@ -140,7 +140,7 @@ const handleFormSubmit = (event) => {
 
 ## How to get help 🆘
 
-Ask for help and share your knowledge about this project with the '[TAG]' tag on [Stack Overflow](https://stackoverflow.com/c/technigo/questions). Talk to your team on Slack and help each other out. Do some research about your problem, you are surely not the first one with this problem, Google is your friend 🙂. And you can of course also book a tech call. 
+Ask for help and share your knowledge about this project with the 'happy-thoughts-project' tag on [Stack Overflow](https://stackoverflow.com/c/technigo/questions). Talk to your team on Slack and help each other out. Do some research about your problem, you are surely not the first one with this problem, Google is your friend 🙂. And you can of course also book a tech call. 
 
 ## Stretch Goals 🏃‍♂
 
