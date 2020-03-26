@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import './messageInput.css'
+
 
 export const MessageInput = () => {
 
@@ -13,7 +15,7 @@ export const MessageInput = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ message: message })
+        body: JSON.stringify({ message })
       }
     ).then(() => {
       window.location.reload();
@@ -23,24 +25,27 @@ export const MessageInput = () => {
     //   .then((newMessage) => {
     //     setMessage((previousThoughts) => [newMessage, ...previousThoughts])
     //   });
-
-
   };
 
 
   return (
-    <form onSubmit={handelSubmit}>
-      <input
-        type="text"
-        className="form-text"
-        onChange={event => setMessage(event.target.value)}
-      >
-      </input>
-      <input
-        type="submit"
-        className="form-button"
-        value="Add message">
-      </input>
-    </form >
+    <div className="thought input">
+      <form onSubmit={handelSubmit}>
+        <textarea
+          rows="3"
+          // cols="50"
+          className="form-text"
+          value={message}
+          onChange={event => setMessage(event.target.value)}
+        ></textarea>
+        <p className={message.length > 140 ? "to-long" : ""} > {Math.abs(140 - message.length)} characters {message.length < 140 ? "left" : "to long"} </p>
+        <input
+          type="submit"
+          disabled={message.length < 5 || message.length > 140 ? true : false}
+          className="form-button"
+          value="Add message">
+        </input>
+      </form>
+    </div >
   )
 }

@@ -1,0 +1,6 @@
+.messageApp {
+  max-width: 300px;
+  margin: auto;
+  font: 16px/24px menlo;
+  color: white;
+}

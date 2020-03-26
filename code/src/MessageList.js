@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Thought } from 'Thought'
+import './messageList.css'
+
 
 export const MessageList = () => {
   // useState
@@ -15,7 +17,7 @@ export const MessageList = () => {
       .then(data => {
         //Set the state
         const filteredData = data.filter(message => {
-          return message.message !== "My happy thought";
+          return message.message !== "My sad thought";
         });
         // filteredData.reverse();
         setMessages(filteredData);
