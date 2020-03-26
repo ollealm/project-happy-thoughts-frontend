@@ -1,5 +1,7 @@
 import React from 'react'
 import moment from 'moment'
+import './thought.css'
+
 
 
 export const Thought = ({ id, message, time, hearts }) => {
@@ -16,18 +18,18 @@ export const Thought = ({ id, message, time, hearts }) => {
         }
       }
     ).then(() => {
-      window.location.reload();
+      window.location.reload(); //slow, add local 
     });
   }
 
   return (
-    <div>
+    <div className="thought">
       <p className="message">
         {message}
-        <span className="time">{moment(time).fromNow()}</span>
-        <span className="hearth">{hearts}</span>
       </p>
-      <button onClick={handleLike}>Like</button>
+      <span className="hearth">{hearts > 5 ? "💚 × " + hearts : '💚'.repeat(hearts)}</span>
+      <span className="time">{moment(time).fromNow()}</span>
+      <button onClick={handleLike}><span role='img' aria-label='heart'> {'💚'}</span></button>
     </div>
   )
 }

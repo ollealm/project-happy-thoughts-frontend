@@ -1,0 +1,12 @@
+.thought {
+  border: 2px solid lime;
+  margin: 32px 0;
+  padding: 16px;
+  box-shadow: 8px 8px 0px -2px lime;
+  background-color: blue;
+  color: lime;
+}
+
+.message {
+  margin-top: 0;
+}
