@@ -2,11 +2,8 @@ import React from 'react'
 import moment from 'moment'
 import './thought.css'
 
-
-
 export const Thought = ({ id, message, time, hearts, onThoughtLiked }) => {
   const url = "https://technigo-thoughts.herokuapp.com/" + id + "/like"
-  console.log(url)
 
   const handleLike = (event) => {
     event.preventDefault();
@@ -21,7 +18,6 @@ export const Thought = ({ id, message, time, hearts, onThoughtLiked }) => {
       onThoughtLiked(id)
     });
   }
-
 
   return (
     <div className="thought">
