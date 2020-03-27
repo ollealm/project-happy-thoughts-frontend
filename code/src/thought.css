@@ -7,6 +7,13 @@
   color: lime;
   overflow-wrap: break-word;
   position: relative;
+  transition: 0.1s;
+
+}
+
+.thought:hover {
+  transform: rotate(3deg);
+  transition: 0.1s;
 }
 
 button {
@@ -23,15 +30,14 @@ button {
   margin-top: 0;
 }
 
-.thought:hover {
-  transform: rotate(3deg);
-  transition: 0.1s;
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .time {
   font-size: 12px;
-  float: right;
-  margin-top: 6px;
+
 }
 
 /* button .hearth {

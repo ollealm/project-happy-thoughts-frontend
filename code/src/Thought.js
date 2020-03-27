@@ -29,8 +29,10 @@ export const Thought = ({ id, message, time, hearts, onThoughtLiked }) => {
         {message}
       </p>
       <button onClick={handleLike}></button>
-      <span className="hearth">{hearts > 7 ? "💚 × " + hearts : '💚'.repeat(hearts)}</span>
-      <span className="time">{moment(time).fromNow()}</span>
+      <div className="bottom-container">
+        <span className="hearth">{hearts > 7 ? "💚 × " + hearts : '💚'.repeat(hearts)}</span>
+        <span className="time">{moment(time).fromNow()}</span>
+      </div>
     </div>
   )
 }

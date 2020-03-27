@@ -3,27 +3,27 @@ import { Thought } from 'Thought'
 import './messageList.css'
 
 
-export const MessageList = () => {
+export const MessageList = ({ messages, setMessages }) => {
   // useState
-  const url = "https://technigo-thoughts.herokuapp.com/";
-  const [messages, setMessages] = useState([]);
+  // const url = "https://technigo-thoughts.herokuapp.com/";
+  // const [messages, setMessages] = useState([]);
 
-  // useEffect
-  useEffect(() => {
-    fetch(url)
-      .then((res) => {
-        return res.json();
-      })
-      .then(data => {
-        //Set the state
-        const filteredData = data.filter(message => {
-          return message.message !== "My sad thought";
-        });
-        // filteredData.reverse();
-        setMessages(filteredData);
-      });
+  // // useEffect
+  // useEffect(() => {
+  //   fetch(url)
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       //Set the state
+  //       const filteredData = data.filter(message => {
+  //         return message.message !== "My sad thought";
+  //       });
+  //       // filteredData.reverse();
+  //       setMessages(filteredData);
+  //     });
 
-  }, []);
+  // }, []);
 
 
   const onThoughtLiked = (likedThoughtId) => {

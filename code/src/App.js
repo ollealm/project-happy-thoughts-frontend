@@ -5,23 +5,30 @@ import './app.css'
 
 
 export const App = () => {
-  // const [thoughts, setThoughts] = useState([])
+  const [messages, setMessages] = useState([]);
+  const url = "https://technigo-thoughts.herokuapp.com/";
 
-  //   useEffect(() => {
-  //     fetch("https://technigo-thoughts.herokuapp.com/")
-  //       .then(res => res.json())
-  //       .then(json => setThoughts(json))
-
-  //   }, [])
+  // useEffect
+  useEffect(() => {
+    fetch(url)
+      .then((res) => {
+        return res.json();
+      })
+      .then(data => {
+        //Set the state
+        setMessages(data);
+      });
+  }, []);
 
   return (
     <div className="messageApp">
-      {/* {thoughts.map(thought => (
-        < div key={thought._id} > {thought.message} </div>
-      ))
-      } */}
-      <MessageInput />
-      <MessageList />
+
+      <MessageInput
+        setMessages={setMessages} />
+
+      <MessageList
+        messages={messages}
+        setMessages={setMessages} />
 
     </div >
   )
