@@ -4,7 +4,7 @@ import './thought.css'
 
 
 
-export const Thought = ({ id, message, time, hearts }) => {
+export const Thought = ({ id, message, time, hearts, onThoughtLiked }) => {
   const url = "https://technigo-thoughts.herokuapp.com/" + id + "/like"
   console.log(url)
 
@@ -18,18 +18,19 @@ export const Thought = ({ id, message, time, hearts }) => {
         }
       }
     ).then(() => {
-      window.location.reload(); //slow, add local 
+      onThoughtLiked(id)
     });
   }
+
 
   return (
     <div className="thought">
       <p className="message">
         {message}
       </p>
-      <span className="hearth">{hearts > 5 ? "💚 × " + hearts : '💚'.repeat(hearts)}</span>
+      <button onClick={handleLike}></button>
+      <span className="hearth">{hearts > 7 ? "💚 × " + hearts : '💚'.repeat(hearts)}</span>
       <span className="time">{moment(time).fromNow()}</span>
-      <button onClick={handleLike}><span role='img' aria-label='heart'> {'💚'}</span></button>
     </div>
   )
 }

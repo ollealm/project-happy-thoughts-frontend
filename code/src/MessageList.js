@@ -25,7 +25,17 @@ export const MessageList = () => {
 
   }, []);
 
-  //render with map()
+
+  const onThoughtLiked = (likedThoughtId) => {
+    const updatedThoughts = messages.map((thought) => {
+      if (thought._id === likedThoughtId) {
+        thought.hearts += 1
+      }
+      return thought
+    })
+    setMessages(updatedThoughts)
+  }
+
 
   return (
     <div >
@@ -37,7 +47,8 @@ export const MessageList = () => {
             id={message._id}
             message={message.message}
             time={message.createdAt}
-            hearts={message.hearts} />
+            hearts={message.hearts}
+            onThoughtLiked={onThoughtLiked} />
 
         )
         )
