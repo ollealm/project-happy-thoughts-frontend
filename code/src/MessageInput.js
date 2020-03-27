@@ -17,23 +17,19 @@ export const MessageInput = ({ setMessages }) => {
         },
         body: JSON.stringify({ message: postedMessage })
       })
-      // .then(() => {
-      //   window.location.reload();
-      // });
 
       .then((res) => res.json())
       .then((newMessage) => {
-        setMessages((previousThoughts) => [newMessage, ...previousThoughts])
+        setMessages((previousMessages) => [newMessage, ...previousMessages])
       });
   };
 
-
   return (
     <div className="thought input">
+      <p className="input-text">What's making you <br />happy right now?</p>
       <form onSubmit={handelSubmit}>
         <textarea
           rows="3"
-          // cols="50"
           className="form-text"
           value={postedMessage}
           onChange={event => setPostedMessage(event.target.value)}
@@ -43,7 +39,7 @@ export const MessageInput = ({ setMessages }) => {
           type="submit"
           disabled={postedMessage.length < 5 || postedMessage.length > 140 ? true : false}
           className="form-button"
-          value="Add message">
+          value="Send thought!">
         </input>
       </form>
     </div >

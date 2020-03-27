@@ -8,7 +8,6 @@
   overflow-wrap: break-word;
   position: relative;
   transition: 0.1s;
-
 }
 
 .thought:hover {
@@ -26,6 +25,12 @@ button {
   opacity: 0;
 }
 
+/* button:focus {  
+  outline: 2px solid white;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0);   
+} */
+
 .message {
   margin-top: 0;
 }
@@ -37,27 +42,4 @@ button {
 
 .time {
   font-size: 12px;
-
 }
-
-/* button .hearth {
-  margin-left: 5px;
-}
-
-.thought button {
-  margin-right: 15px;
-  height: 30px;
-  width: 45px;
-  background-color: black;
-  color: white;
-  border: 1px solid lime;
-  font-size: 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.1s ease-in;
-}
-
-button:hover {
-  transform: scale(1.1);
-} */
-

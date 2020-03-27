@@ -1,13 +1,58 @@
 .input {
   background-color: yellow;
   transform: rotate(5deg);
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>✏️</text></svg>") 16 0,auto; /*!emojicursor.app*/
+}
+
+.input-text {
+  margin-top: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .input:hover {
   transform: rotate(0deg);
 }
 
-
 .to-long {
   color: red;
+}
+
+textarea {
+  box-sizing: border-box;
+  font: 16px/24px menlo;
+  width: 98%;
+  padding: 10px;
+  border: none;
+  resize: none;
+  color: lime;
+  background: white;
+  outline: 1px solid lime;
+}
+
+textarea:focus {
+  outline: 2px solid lime;
+}
+
+.form-button {
+  height: 35px;
+  width: fit-content;
+  background-color: blue;
+  color: lime;
+  padding: 5px 15px;
+  font: 16px/24px menlo;
+  border: 0px solid lime;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.form-button:hover {
+  transform: scale(1.02);
+  transition: 0.1s;
+} 
+
+.form-button:disabled {
+  color: green;
 }

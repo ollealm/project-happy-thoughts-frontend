@@ -1,30 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Thought } from 'Thought'
 import './messageList.css'
 
 
 export const MessageList = ({ messages, setMessages }) => {
-  // useState
-  // const url = "https://technigo-thoughts.herokuapp.com/";
-  // const [messages, setMessages] = useState([]);
-
-  // // useEffect
-  // useEffect(() => {
-  //   fetch(url)
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then(data => {
-  //       //Set the state
-  //       const filteredData = data.filter(message => {
-  //         return message.message !== "My sad thought";
-  //       });
-  //       // filteredData.reverse();
-  //       setMessages(filteredData);
-  //     });
-
-  // }, []);
-
 
   const onThoughtLiked = (likedThoughtId) => {
     const updatedThoughts = messages.map((thought) => {
@@ -41,7 +20,6 @@ export const MessageList = ({ messages, setMessages }) => {
     <div >
       {
         messages.map(message => (
-
           <Thought
             key={message._id}
             id={message._id}
@@ -49,7 +27,6 @@ export const MessageList = ({ messages, setMessages }) => {
             time={message.createdAt}
             hearts={message.hearts}
             onThoughtLiked={onThoughtLiked} />
-
         )
         )
       }
