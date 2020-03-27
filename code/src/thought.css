@@ -1,12 +1,57 @@
 .thought {
   border: 2px solid lime;
-  margin: 32px 0;
+  margin: 45px 0;
   padding: 16px;
   box-shadow: 8px 8px 0px -2px lime;
   background-color: blue;
   color: lime;
+  overflow-wrap: break-word;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💚</text></svg>") 16 0,auto; /*!emojicursor.app*/
+  opacity: 0;
 }
 
 .message {
   margin-top: 0;
 }
+
+.thought:hover {
+  transform: rotate(3deg);
+  transition: 0.1s;
+}
+
+.time {
+  font-size: 12px;
+  float: right;
+  margin-top: 6px;
+}
+
+/* button .hearth {
+  margin-left: 5px;
+}
+
+.thought button {
+  margin-right: 15px;
+  height: 30px;
+  width: 45px;
+  background-color: black;
+  color: white;
+  border: 1px solid lime;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+
+button:hover {
+  transform: scale(1.1);
+} */
+
