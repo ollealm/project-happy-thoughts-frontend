@@ -5,6 +5,7 @@ import './messageList.css'
 
 export const MessageList = ({ messages, setMessages }) => {
 
+  // add hearts locally for instant UX response
   const onThoughtLiked = (likedThoughtId) => {
     const updatedThoughts = messages.map((thought) => {
       if (thought._id === likedThoughtId) {
