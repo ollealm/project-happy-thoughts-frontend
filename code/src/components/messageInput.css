@@ -7,6 +7,7 @@
 .input-text {
   margin-top: 0;
   font-weight: bold;
+  font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -54,5 +55,7 @@ textarea:focus {
 } 
 
 .form-button:disabled {
-  color: green;
+  opacity: 0.3;
+  background-color: grey;
+  color: rgb(61, 61, 61);
 }

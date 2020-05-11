@@ -1,5 +1,5 @@
 import React from 'react'
-import { Thought } from 'Thought'
+import { Thought } from 'components/Thought'
 import './messageList.css'
 
 

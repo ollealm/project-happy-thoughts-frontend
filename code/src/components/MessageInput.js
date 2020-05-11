@@ -26,7 +26,7 @@ export const MessageInput = ({ setMessages }) => {
 
   return (
     <div className="thought input">
-      <p className="input-text">What's making you <br />happy right now?</p>
+      <h1 className="input-text">What's making you <br />happy right now?</h1>
       <form onSubmit={handelSubmit}>
         <textarea
           rows="3"
@@ -36,6 +36,7 @@ export const MessageInput = ({ setMessages }) => {
         ></textarea>
         <p className={postedMessage.length > 140 ? "to-long" : ""} > {Math.abs(140 - postedMessage.length)} characters {postedMessage.length < 140 ? "left" : "too long"} </p>
         <input
+          title={postedMessage.length < 5 ? "Minimum 5 characters" : "Post your thought"}
           type="submit"
           disabled={postedMessage.length < 5 || postedMessage.length > 140 ? true : false}
           className="form-button"
