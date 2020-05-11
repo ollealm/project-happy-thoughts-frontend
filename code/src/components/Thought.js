@@ -3,7 +3,7 @@ import moment from 'moment'
 import './thought.css'
 
 export const Thought = ({ id, message, time, hearts, onThoughtLiked }) => {
-  const url = "https://technigo-thoughts.herokuapp.com/" + id + "/like"
+  const url = `https://technigo-thoughts.herokuapp.com/${id}/like`
 
   const handleLike = (event) => {
     event.preventDefault();
@@ -26,7 +26,7 @@ export const Thought = ({ id, message, time, hearts, onThoughtLiked }) => {
       </p>
       <button onClick={handleLike}></button>
       <div className="bottom-container">
-        <span className="hearth">{hearts > 7 ? "💚 × " + hearts : '💚'.repeat(hearts)}</span>
+        <span className="hearth">{hearts > 7 ? `💚 × ${hearts}` : '💚'.repeat(hearts)}</span>
         <span className="time">{moment(time).fromNow()}</span>
       </div>
     </div>
