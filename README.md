@@ -1,4 +1,4 @@
-# Happy Thoughts
+# Happy Thoughts&ensp;|&ensp;[View Live &#10555;](https://olle-happy-thoughts.netlify.com/)
 
 Twitter like app where you can post your happy thoughts, read others and give them a like. React site using the useEffect hook and a joint API to fetch and post data.
 
@@ -21,4 +21,4 @@ Time codes added using Moment library
 ![Screenshot](screenshot.jpg)
 
 ## View it live
-olle-happy-thoughts.netlify.com
+https://olle-happy-thoughts.netlify.com
