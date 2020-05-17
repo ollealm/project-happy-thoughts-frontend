@@ -1,13 +1,24 @@
 # Happy Thoughts
 
-Replace this readme with your own information about your project.
+Twitter like app where you can post your happy thoughts, read others and give them a like. React site using the useEffect hook and a joint API to fetch and post data.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Used Postman to explore the API with POST and GET commands. 
 
-## The problem
+Conditionally renders different styles and elements with the ternary operator e.g.
+a loading component that conditionals renders while fetching the data. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Time codes added using Moment library 
+
+## Core Tech
+* React
+* useEffect Hook
+* useState Hook
+* Fetch
+* Postman
+* CSS3
+
+## Screenshot
+![Screenshot](screenshot.jpg)
 
 ## View it live
-
 olle-happy-thoughts.netlify.com
