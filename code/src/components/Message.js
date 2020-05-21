@@ -1,9 +1,9 @@
 import React from 'react'
 import moment from 'moment'
-import './thought.css'
+import './message.css'
 
-export const Thought = ({ id, message, time, hearts, onThoughtLiked }) => {
-  const url = `https://technigo-thoughts.herokuapp.com/${id}/like`
+export const Message = ({ id, name, message, time, hearts, theme, onThoughtLiked, url }) => {
+  url = `${url}${id}/like`
 
   const handleLike = (event) => {
     event.preventDefault();
@@ -20,15 +20,16 @@ export const Thought = ({ id, message, time, hearts, onThoughtLiked }) => {
   }
 
   return (
-    <div className="thought">
+    <div className={`thought ${theme}`} >
       <p className="message">
         {message}
+        <span className="name">{name}</span>
       </p>
       <button onClick={handleLike}></button>
       <div className="bottom-container">
         <span className="hearth">{hearts > 7 ? `💚 × ${hearts}` : '💚'.repeat(hearts)}</span>
         <span className="time">{moment(time).fromNow()}</span>
       </div>
-    </div>
+    </div >
   )
 }
