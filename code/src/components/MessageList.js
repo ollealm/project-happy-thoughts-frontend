@@ -1,15 +1,15 @@
 import React from 'react'
-import { Thought } from 'components/Thought'
+import { Message } from 'components/Message'
 import './messageList.css'
 
 
-export const MessageList = ({ messages, setMessages }) => {
+export const MessageList = ({ messages, setMessages, url }) => {
 
   // add hearts locally for instant UX response
   const onThoughtLiked = (likedThoughtId) => {
     const updatedThoughts = messages.map((thought) => {
       if (thought._id === likedThoughtId) {
-        thought.hearts += 1
+        thought.likes += 1
       }
       return thought
     })
@@ -21,13 +21,16 @@ export const MessageList = ({ messages, setMessages }) => {
     <div >
       {
         messages.map(message => (
-          <Thought
+          <Message
             key={message._id}
             id={message._id}
+            name={message.name}
             message={message.message}
             time={message.createdAt}
-            hearts={message.hearts}
-            onThoughtLiked={onThoughtLiked} />
+            hearts={message.likes}
+            theme={message.tag}
+            onThoughtLiked={onThoughtLiked}
+            url={url} />
         )
         )
       }

@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import './messageInput.css'
 
 
-export const MessageInput = ({ setMessages }) => {
+export const MessageInput = ({ setMessages, url }) => {
 
-  const url = "https://technigo-thoughts.herokuapp.com/";
   const [postedMessage, setPostedMessage] = useState([]);
 
   const handelSubmit = (event) => {
