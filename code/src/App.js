@@ -20,7 +20,7 @@ export const App = () => {
       .then(data => {
         setTimeout(() => { // timeout to always show loader
           setMessages(data.thoughts);
-          setPages({ pages: data.pages, total: data.total })
+          setPages({ pages: data.pages, total: data.totalResults })
           setLoading(false)
         }, 1500)
       });
