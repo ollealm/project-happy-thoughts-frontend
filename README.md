@@ -9,7 +9,8 @@ a loading component while fetching the data.
 Time codes added using Moment library.
 
 ### V 2.0
-Remade to use my own express.js API to store messages and likes. [(See separate repo.)](https://github.com/ollealm/project-happy-thoughts-api)
+Remade to use my own express.js API to store messages and likes. (See separate [repo](https://github.com/ollealm/project-happy-thoughts-api))
+
 Added messages categories and author name.
 
 ## Core Tech
