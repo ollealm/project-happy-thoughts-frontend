@@ -1,13 +1,16 @@
-# Happy Thoughts&ensp;|&ensp;[View Live &#10555;](https://olle-happy-thoughts.netlify.com/)
+# Happy Thoughts&ensp;|&ensp;[View Live &#10555;](https://olle-happy-thoughts-2.netlify.app/)
 
-Twitter like app where you can post your happy thoughts, read others and give them a like. React site using the `useEffect` hook and a joint API to fetch and post data.
-
-Used Postman to explore the API with POST and GET commands. 
+Twitter like app where you can post your happy thoughts, read others and give them a like. 
+React site using the `useEffect` hook to fetch and post data.
 
 Conditionally renders different styles and elements with the ternary operator e.g.
 a loading component while fetching the data. 
 
 Time codes added using Moment library.
+
+### V 2.0
+Remade to use my own express.js API to store messages and likes. (See separate repo.) 
+Also added message categories and author name.
 
 ## Core Tech
 * React
@@ -21,4 +24,7 @@ Time codes added using Moment library.
 ![Screenshot](screenshot.jpg)
 
 ## View it live
-https://olle-happy-thoughts.netlify.com
+https://olle-happy-thoughts-2.netlify.app/
+
+## Backend repo
+https://github.com/ollealm/project-happy-thoughts-api
