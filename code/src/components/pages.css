@@ -1,0 +1,30 @@
+.pages {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.pages-text {
+  color: lime;
+  margin: 0;
+}
+
+button {
+  display: inline;
+  color: lime;
+  cursor: pointer;
+  background: none;
+  padding: 0 5px;
+  font: 16px/24px menlo;
+  border: none;
+  height: fit-content;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+button:focus {
+  outline-color: lime;
+  outline-style: dotted;
+}
