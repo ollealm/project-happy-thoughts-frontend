@@ -1,18 +1,26 @@
 import React from "react";
 import "./pages.css";
 
-export const Pages = ({ setPage, page, pages, total, loading }) => {
+export const Pages = ({
+  setCurrentPage,
+  currentPage,
+  pages,
+  totalMessages,
+  loading,
+}) => {
   const increment = () => {
-    setPage(page + 1);
+    setCurrentPage(Math.min(currentPage + 1, pages));
   };
   return (
     <>
       {!loading && (
         <div className="pages">
-          <p className="pages-text">
-            Page {pages} of {total}
-          </p>
-          <button onClick={increment}>Next page</button>
+          <p className="pages-text">Page {currentPage}</p>
+          {currentPage === pages ? (
+            <p className="pages-text">No older posts</p>
+          ) : (
+            <button onClick={increment}>Show older posts</button>
+          )}
         </div>
       )}
     </>

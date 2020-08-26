@@ -8,9 +8,9 @@ import "./app.css";
 export const App = () => {
   const [messages, setMessages] = useState([]);
   const [pages, setPages] = useState({});
-  const [page, setPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
-  const url = "https://olle-happy-thoughts.herokuapp.com/";
+  const url = `https://olle-happy-thoughts.herokuapp.com/?page=${currentPage}`;
 
   useEffect(() => {
     setLoading(true);
@@ -22,24 +22,29 @@ export const App = () => {
         setTimeout(() => {
           // timeout to always show loader
           setMessages(data.thoughts);
-          setPages({ pages: data.pages, total: data.totalResults });
+          setPages({ pages: data.pages, totalMessages: data.totalResults });
           setLoading(false);
         }, 1500);
       });
-  }, []);
+  }, [currentPage]);
 
   return (
     <div className="messageApp">
       <MessageInput setMessages={setMessages} url={url} />
+      <Loading loading={loading} />
       <Pages
-        setPage={setPage}
-        page={page}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
         pages={pages.pages}
-        total={pages.total}
+        totalMessages={pages.totalMessages}
         loading={loading}
       />
-      <Loading loading={loading} />
-      <MessageList messages={messages} setMessages={setMessages} url={url} />
+      <MessageList
+        messages={messages}
+        setMessages={setMessages}
+        url={url}
+        loading={loading}
+      />
     </div>
   );
 };
