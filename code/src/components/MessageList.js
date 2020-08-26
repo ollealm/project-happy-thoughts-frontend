@@ -14,7 +14,7 @@ export const MessageList = ({ messages, setMessages, url, loading }) => {
     setMessages(updatedThoughts);
   };
 
-  if (messages == undefined) {
+  if (messages === undefined) {
     return <p>No messages found</p>;
   } else {
     return (

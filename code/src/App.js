@@ -10,11 +10,11 @@ export const App = () => {
   const [pages, setPages] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
-  const url = `https://olle-happy-thoughts.herokuapp.com/?page=${currentPage}`;
+  const url = "https://olle-happy-thoughts.herokuapp.com/";
 
   useEffect(() => {
     setLoading(true);
-    fetch(url)
+    fetch(`${url}?page=${currentPage}`)
       .then((res) => {
         return res.json();
       })
